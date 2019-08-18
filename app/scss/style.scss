@@ -286,12 +286,14 @@ input:focus {
   margin-bottom: 51px;
 }
 
-.list__title {
+.default__title {
   font-size: 40px;
   font-family: $fn-mb;
   color: $black-text;
   line-height: 50px;
   margin-bottom: 45px;
+}
+.list__title-inner {
   margin-top: 48px;
   max-width: 450px;
 }
@@ -479,22 +481,44 @@ input:focus {
 }
 
 .features__wrapper {
+  width: 1720px;
+  margin: 0 auto;
+  text-align: left;
+}
+.features__img {
   width: 875px;
   height: 645px;
-  background: url(../images/women.jpg) no-repeat left top / contain;
+  display: inline-block;
+  background: url(../images/women.jpg) no-repeat center / cover;
+  margin: 0 auto;
 }
-
+.features__inner {
+  margin-top: -652px;
+  position: relative;
+  z-index: 5;
+}
 .features__comment {
   padding: 20px;
+  margin-top: 483px;
   background-color: #fff;
   max-width: 600px;
   width: 100%;
-}
 
+}
 .features__comment-inner {
   border: 1px solid $green-light-border;
-  .default__button {
-    
-  }
+  padding: 38px 68px 38px 38px;
+}
+.features__comment-text {
+  font-family: $fn-mr;
+  font-size: 16px;
+  line-height: 24px;
+}
+.features .default__button {
+  text-transform: uppercase;
+  width: 100%;
+  text-align: center;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 @import "media";
