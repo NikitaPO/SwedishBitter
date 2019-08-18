@@ -493,5 +493,8 @@ input:focus {
 
 .features__comment-inner {
   border: 1px solid $green-light-border;
+  .default__button {
+    
+  }
 }
 @import "media";
