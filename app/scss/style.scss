@@ -198,7 +198,7 @@ input:focus {
 }
 
 .default__button {
-  padding: 22px 108px 22px 74px;
+  padding: 22px 99px 22px 74px;
   font-family: $fn-mb;
   color: #fff;
   border: none;
@@ -214,12 +214,12 @@ input:focus {
   width: 32px;
   height: 8px;
   position: absolute;
-  margin-left: 19px;
-  top: 25px;
+  right: 53px;
+  top: 50%;
+  transform: translateY(-50%);
   z-index: 3;
 }
 //advantages
-
 .advantages {
   padding-top: 86px;
   padding-bottom: 200px;
@@ -272,6 +272,7 @@ input:focus {
 .list {
   padding-top: 165px;
 }
+
 .tab__content {
   min-width: 500px;
   height: 689px;
@@ -291,10 +292,11 @@ input:focus {
   font-family: $fn-mb;
   color: $black-text;
   line-height: 50px;
-  margin-bottom: 45px;
 }
+
 .list__title-inner {
   margin-top: 48px;
+  margin-bottom: 45px;
   max-width: 450px;
 }
 
@@ -312,7 +314,7 @@ input:focus {
 
 .tab::after {
   content: '';
-  background-image: url(../images/arr.png);
+  background-image: url("../images/arr.png");
   position: absolute;
   width: 9px;
   height: 14px;
@@ -438,20 +440,23 @@ input:focus {
   max-width: 415px;
   width: 100%;
   background-color: $green-light-bg;
-  padding: 19px 19px 0 19px;
+  padding: 19px 19px 0;
 }
+
 .list__box-wrapper {
   border: 1px solid #c5dab5;
   padding: 24px 24px 0 30px;
   position: relative;
 }
+
 .list__box-text {
   font-family: $fn-mr;
   font-size: 16px;
   line-height: 24px;
-  letter-spacing: 0px;
+  letter-spacing: 0;
   padding-bottom: 30px;
 }
+
 .list__box-link {
   position: absolute;
   padding: 0 6px;
@@ -464,61 +469,183 @@ input:focus {
   bottom: -11px;
   left: 45px;
 }
+
 .list__box-link:hover {
   text-decoration: none;
 }
+
 .list__button-inner {
   text-align: right;
+
   .default__button {
     min-width: 500px;
     text-transform: uppercase;
+    padding-right: 153px;
+    padding-left: 115px;
+  }
+
+  .default__button::after {
+    right: 104px;
   }
 }
-
 //features
+
 .features {
   margin-top: 200px;
+  margin-bottom: 270px;
 }
 
-.features__wrapper {
-  width: 1720px;
-  margin: 0 auto;
-  text-align: left;
-}
 .features__img {
   width: 875px;
   height: 645px;
   display: inline-block;
-  background: url(../images/women.jpg) no-repeat center / cover;
-  margin: 0 auto;
+  background: url("../images/women.jpg") no-repeat center / cover;
+  margin-left: -275px;
 }
+
 .features__inner {
-  margin-top: -652px;
   position: relative;
-  z-index: 5;
+  display: flex;
+  justify-content: space-between;
 }
+
 .features__comment {
   padding: 20px;
-  margin-top: 483px;
+  position: absolute;
+  top: 483px;
   background-color: #fff;
   max-width: 600px;
   width: 100%;
-
 }
+
 .features__comment-inner {
   border: 1px solid $green-light-border;
-  padding: 38px 68px 38px 38px;
+  padding: 38px 38px 38px 38px;
 }
+
 .features__comment-text {
   font-family: $fn-mr;
   font-size: 16px;
   line-height: 24px;
 }
-.features .default__button {
-  text-transform: uppercase;
-  width: 100%;
-  text-align: center;
-  padding-left: 15px;
-  padding-right: 15px;
+
+.features {
+  .default__button {
+    text-transform: uppercase;
+    padding-left: 35px;
+    padding-right: 89px;
+    width: 100%;
+    text-align: center;
+  }
+  .default__button:after {
+    right: 40px;
+  }
 }
+
+.features__title-inner {
+    margin-bottom: 45px;
+}
+
+.features__list-box {
+  padding: 46px 0 0 70px;
+}
+
+.features__list-title {
+  text-transform: uppercase;
+  font-family: $fn-mb;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: .5px;
+  margin-bottom: 64px;
+}
+
+.features__list li {
+  position: relative;
+  padding-left: 44px;
+}
+
+.features__list li::before {
+  content: '';
+  background-image: url("../images/arr.png");
+  position: absolute;
+  width: 9px;
+  height: 14px;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.features__list li + li {
+  margin-top: 49px;
+}
+
+//about
+
+.about__wrapper {
+  width: 1720px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.about__box {
+  position: relative;
+  z-index: 5;
+  padding-top: 42px;
+  max-width: 715px;
+  width: 100%;
+  .default__title {
+    margin-bottom: 50px;
+  }
+}
+
+.about__text {
+  background-color: #f6f9f3;
+  padding: 58px 50px 64px 275px;
+  margin-left: -275px;
+  font-family: $fn-mr;
+  font-size: 16px;
+  p + p {
+    margin-top: 21px;
+  }
+}
+
+.about__img {
+  position: absolute;
+  right: 0;
+}
+
+.about__form {
+  max-width: 370px;
+  margin-left: 244px;
+  margin-top: 47px;
+  .default__button {
+    width: 100%;
+    text-transform: uppercase;
+    margin-top: 35px;
+  }
+  input {
+    width: 100%;
+    font-size: 14px;
+    border: none;
+    border-bottom: 1px solid $green-light-border;
+    font-family: $fn-mr;
+    color: #000;
+    min-width: 195px;
+    background-color: transparent;
+    padding: 13px 0;
+  }
+
+  input::placeholder {
+    color: $green-text;
+  }
+}
+
+.about__form-title {
+  font-family: $fn-mb;
+  text-transform: uppercase;
+  font-size: 14px;
+  line-height: 22px;
+  margin-bottom: 42px;
+}
+
 @import "media";
