@@ -721,6 +721,7 @@ input:focus {
   display: block;
 }
 //numbers
+
 .numbers {
   margin-top: 198px;
 
@@ -744,6 +745,7 @@ input:focus {
   padding: 20px;
   max-width: 1000px;
   margin: 0 auto;
+
   & > div + div {
     margin-left: 20px;
   }
@@ -780,6 +782,7 @@ input:focus {
   text-transform: uppercase;
   margin-top: 28px;
 }
+
 .numbers-bg {
   position: relative;
   z-index: -1;
@@ -787,5 +790,165 @@ input:focus {
   height: 380px;
   width: 100%;
   margin-top: -280px;
+}
+//composition
+.composition {
+  margin-top: 200px;
+}
+
+.composition__items {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.composition__item {
+  background-color: #f6f9f3;
+  color: $green-text;
+  height: 270px;
+  width: 270px;
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 0.3px;
+  padding: 15px;
+  position: relative;
+  transform: rotate(-90deg);
+  margin-bottom: 30px;
+
+  & div:nth-child(2) {
+    position: absolute;
+    z-index: 1;
+    height: 224px;
+    width: 155px;
+    top: 50%;
+    right: 0;
+    transform: rotate(90deg) translate(-70%, 25%);
+  }
+}
+
+.composition__item-top-text {
+  font-family: $fn-mb;
+  text-align: right;
+}
+
+.composition__item-name {
+  font-family: $fn-mr;
+  position: absolute;
+  bottom: 15px;
+  left: 15px;
+}
+
+.composition__image-1 {
+  background: url("../images/grass-item1.png") no-repeat center / contain;
+}
+
+.composition__image-2 {
+  background: url("../images/grass-item2.png") no-repeat center / contain;
+}
+
+.composition__image-3 {
+  background: url("../images/grass-item3.png") no-repeat center / contain;
+}
+
+.composition__image-4 {
+  background: url("../images/grass-item4.png") no-repeat center / contain;
+}
+
+.composition__image-5 {
+  background: url("../images/grass-item5.png") no-repeat center / contain;
+}
+
+.composition__image-6 {
+  background: url("../images/grass-item6.png") no-repeat center / contain;
+}
+
+.composition__image-7 {
+  background: url("../images/grass-item7.png") no-repeat center / contain;
+}
+
+.composition__image-8 {
+  background: url("../images/grass-item8.png") no-repeat center / contain;
+}
+
+.composition__image-9 {
+  background: url("../images/grass-item9.png") no-repeat center / contain;
+}
+
+.composition__image-10 {
+  background: url("../images/grass-item10.png") no-repeat center / contain;
+}
+
+.composition__list-box {
+  max-width: 570px;
+  width: 100%;
+  padding-left: 48px;
+  margin-top: -60px;
+
+  .default__title {
+    margin-bottom: 60px;
+  }
+}
+
+.composition__list {
+  li {
+    padding-left: 26px;
+    position: relative;
+  }
+
+  li + li {
+    margin-top: 37px;
+  }
+
+  li::before {
+    content: '';
+    height: 7px;
+    width: 7px;
+    background-color: #a4c58c;
+    position: absolute;
+    border-radius: 50%;
+    left: 0;
+    top: 8px;
+  }
+}
+
+.composition__box {
+  max-width: 870px;
+  width: 100%;
+  padding: 20px;
+
+  p + p {
+    margin-top: 20px;
+  }
+
+  .default__button {
+    text-transform: uppercase;
+  }
+}
+
+.composition__box-text {
+  position: relative;
+  padding-left: 23px;
+}
+
+.composition__box-text::before {
+  content: '';
+  height: 7px;
+  width: 7px;
+  background-color: #a4c58c;
+  position: absolute;
+  border-radius: 50%;
+  left: 0;
+  top: 8px;
+}
+
+.composition__box-button-inner {
+  text-align: right;
+  margin-top: 30px;
+  margin-right: -80px;
+}
+
+.composition__box-wrapper {
+  border: 1px solid #d0e1c3;
+  padding: 46px 80px 0 58px;
 }
 @import "media";
