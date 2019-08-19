@@ -1,62 +1,58 @@
 @import "fonts";
 @import "vars";
 @import "libs";
-//
-// html {
-//   box-sizing: border-box;
-// }
-//
-// *,
-// *::after,
-// *::before {
-//   box-sizing: inherit;
-// }
-//
-// a {
-//   text-decoration: none;
-//   display: inline-block;
-// }
-//
-// li,
-// ul {
-//   display: block;
-//   list-style: none;
-//   margin: 0;
-//   padding: 0;
-// }
-//
-// h1,
-// h2,
-// h3,
-// h4,
-// h5,
-// h6,
-// p {
-//   margin: 0;
-//   padding: 0;
-// }
-//
-// a,
-// button {
-//   border: none;
-//   outline: none;
-//   cursor: pointer;
-// }
-//
-// body {
-//   font-family: $fn-mr;
-//   color: $black-text;
-//   line-height: 23px;
-//   font-weight: 400;
-// }
-//
-// input:focus {
-//   outline: none;
-// }
-//
-// .noselect {
-//   user-select: none;
-// }
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+a {
+  text-decoration: none;
+  display: inline-block;
+}
+
+li,
+ul {
+  display: block;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+a,
+button {
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+body {
+  font-family: $fn-mr;
+  color: $black-text;
+  line-height: 23px;
+  font-weight: 400;
+}
+
+input:focus {
+  outline: none;
+}
 
 .container {
   max-width: 1200px;
@@ -660,9 +656,12 @@
 //slider
 
 .slider__wrapper {
+  position: relative;
   display: flex;
   justify-content: space-between;
   height: 619px;
+  opacity: 0.2;
+  transition: opacity 1s;
 }
 
 .slider__bg-pice {
@@ -670,10 +669,9 @@
   z-index: -1;
   width: 500px;
   background: url("../images/flower.png") no-repeat center / contain;
-  opacity: 0.2;
 }
 
-.slider__bg-pice.hover {
+.slider__wrapper:hover {
   opacity: 0.8;
 }
 
@@ -682,6 +680,8 @@
 }
 
 .slider__content {
+  position: relative;
+  z-index: 2;
   text-align: center;
   padding: 50px 0;
   max-width: 770px;
@@ -769,6 +769,7 @@
   top: 100px;
   left: 50%;
   transform: translateX(-50%);
+  // transform: translateY(-50%);
   position: absolute;
 }
 
@@ -779,7 +780,6 @@
   text-transform: uppercase;
   margin-top: 28px;
 }
-
 .numbers-bg {
   position: relative;
   z-index: -1;

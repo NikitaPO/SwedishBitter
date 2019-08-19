@@ -11,13 +11,4 @@ $(function() {
     $('.tab[data-id=' + id + ']:after').css('display', 'block');
     return false;
   });
-  // 
-  // $('.slider__content').slick({
-  //   dots: true,
-  //   infinite: true,
-  //   speed: 300,
-  //   slidesToShow: 1,
-  //   adaptiveHeight: true
-  // });
-
 });
