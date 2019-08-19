@@ -1,58 +1,62 @@
 @import "fonts";
 @import "vars";
 @import "libs";
-
-html {
-  box-sizing: border-box;
-}
-
-*,
-*::after,
-*::before {
-  box-sizing: inherit;
-}
-
-a {
-  text-decoration: none;
-  display: inline-block;
-}
-
-li,
-ul {
-  display: block;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p {
-  margin: 0;
-  padding: 0;
-}
-
-a,
-button {
-  border: none;
-  outline: none;
-  cursor: pointer;
-}
-
-body {
-  font-family: $fn-mr;
-  color: $black-text;
-  line-height: 23px;
-  font-weight: 400;
-}
-
-input:focus {
-  outline: none;
-}
+//
+// html {
+//   box-sizing: border-box;
+// }
+//
+// *,
+// *::after,
+// *::before {
+//   box-sizing: inherit;
+// }
+//
+// a {
+//   text-decoration: none;
+//   display: inline-block;
+// }
+//
+// li,
+// ul {
+//   display: block;
+//   list-style: none;
+//   margin: 0;
+//   padding: 0;
+// }
+//
+// h1,
+// h2,
+// h3,
+// h4,
+// h5,
+// h6,
+// p {
+//   margin: 0;
+//   padding: 0;
+// }
+//
+// a,
+// button {
+//   border: none;
+//   outline: none;
+//   cursor: pointer;
+// }
+//
+// body {
+//   font-family: $fn-mr;
+//   color: $black-text;
+//   line-height: 23px;
+//   font-weight: 400;
+// }
+//
+// input:focus {
+//   outline: none;
+// }
+//
+// .noselect {
+//   user-select: none;
+// }
 
 .container {
   max-width: 1200px;
@@ -765,7 +769,6 @@ input:focus {
   top: 100px;
   left: 50%;
   transform: translateX(-50%);
-  // transform: translateY(-50%);
   position: absolute;
 }
 
@@ -776,6 +779,7 @@ input:focus {
   text-transform: uppercase;
   margin-top: 28px;
 }
+
 .numbers-bg {
   position: relative;
   z-index: -1;

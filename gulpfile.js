@@ -21,14 +21,12 @@ gulp.task('scss', function() {
     .pipe(rename({
       suffix: '.min'
     }))
-    .pipe(sourcemaps.init())
     .pipe(scss({
       outputStyle: 'compressed'
     }).on('error', scss.logError))
     .pipe(autoprefixer({
         overRideBrowsers: ['last 10 versions'],
     }))
-    .pipe(sourcemaps.write('.'))
     .pipe(gulp.dest('app/css'))
     .pipe(browserSync.reload({
       stream: true
@@ -61,13 +59,11 @@ gulp.task('js', function() {
       'app/js/index.js'
     ])
     .pipe(plumber())
-    .pipe(sourcemaps.init())
     .pipe(babel({
       presets: ['@babel/env']
     }))
     .pipe(concat('index.min.js'))
     .pipe(uglify())
-    .pipe(sourcemaps.write('.'))
     .pipe(gulp.dest('app/js'))
     .pipe(browserSync.reload({
       stream: true
