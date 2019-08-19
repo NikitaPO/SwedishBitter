@@ -582,6 +582,7 @@ input:focus {
   margin-top: 49px;
 }
 //about
+
 .about__wrapper {
   width: 1720px;
   margin: 0 auto;
@@ -652,13 +653,12 @@ input:focus {
   line-height: 22px;
   margin-bottom: 42px;
 }
-
 //slider
+
 .slider__wrapper {
   display: flex;
   justify-content: space-between;
   height: 619px;
-  margin-bottom: 95px;
 }
 
 .slider__bg-pice {
@@ -715,5 +715,73 @@ input:focus {
 
 .slider__item.active {
   display: block;
+}
+//numbers
+.numbers {
+  margin-top: 198px;
+
+  .default__title {
+    max-width: 525px;
+    width: 100%;
+    margin-bottom: 39px;
+  }
+}
+
+.numbers__wrapper {
+  width: 1720px;
+  margin: 0 auto;
+}
+
+.numbers__items {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  background-color: #fff;
+  padding: 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+  & > div + div {
+    margin-left: 20px;
+  }
+}
+
+.numbers__item {
+  border: 1px solid #e4eddc;
+  width: 310px;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  position: relative;
+}
+
+.numbers__item-bg-text {
+  font-family: $fn-mbl;
+  font-size: 150px;
+  letter-spacing: 0.5px;
+  line-height: 150px;
+  color: #f7f9f3;
+}
+
+.numbers__item-img {
+  top: 100px;
+  left: 50%;
+  transform: translateX(-50%);
+  // transform: translateY(-50%);
+  position: absolute;
+}
+
+.numbers__item-text {
+  font-family: $fn-mb;
+  font-size: 14px;
+  line-height: 20px;
+  text-transform: uppercase;
+  margin-top: 28px;
+}
+.numbers-bg {
+  position: relative;
+  z-index: -1;
+  background-color: $green-light-bg;
+  height: 380px;
+  width: 100%;
+  margin-top: -280px;
 }
 @import "media";
