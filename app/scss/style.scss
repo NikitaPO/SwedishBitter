@@ -951,4 +951,35 @@ input:focus {
   border: 1px solid #d0e1c3;
   padding: 46px 80px 0 58px;
 }
+
+.composition__item-bg {
+  position: absolute;
+  font-family: $fn-mb;
+  font-size: 220px;
+  line-height: 200px;
+  color: #cedfc0;
+  z-index: 0;
+  top: 36px;
+  right: 71px;
+  letter-spacing: 0;
+  transform: rotate(90deg);
+}
+
+.composition__item-text-wrapper {
+  position: relative;
+}
+
+.composition .composition__item .composition__item-text {
+  position: absolute;
+  color: $black-text;
+  font-family: $fn-mb;
+  font-size: 14px;
+  height: auto;
+  bottom: 0;
+  left: 0;
+  line-height: 22px;
+  text-transform: uppercase;
+  max-width: 122px;
+  padding-bottom: 24px;
+}
 @import "media";
