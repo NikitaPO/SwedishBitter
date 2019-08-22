@@ -1029,7 +1029,7 @@ input:focus {
 }
 
 .comments__items {
-  padding: 80px 70px 0;
+  padding: 60px 70px 0;
 }
 
 .comments__item {
@@ -1089,5 +1089,51 @@ input:focus {
   .default__link {
     margin-right: 50px;
   }
+}
+//order
+.order {
+  margin-top: 200px;
+}
+
+.order__wrapper {
+  background: url("../images/el-bg.jpg") no-repeat left top / contain;
+  margin: 0 auto;
+  height: 775px;
+  width: 1720px;
+}
+
+.order__box-wrapper {
+  display: flex;
+  justify-content: flex-end;
+  padding-top: 60px;
+}
+
+.order__box {
+  max-width: 685px;
+  width: 100%;
+  padding: 20px;
+  background-color: #fff;
+
+  .default__title {
+    margin-bottom: 30px;
+  }
+
+  p + p {
+    margin-top: 20px;
+    font-family: $fn-mr;
+    font-size: 16px;
+  }
+}
+
+.order__headline {
+  margin-top: 40px;
+  margin-bottom: 60px;
+  text-transform: uppercase;
+  font: 14px $fn-mb;
+}
+
+.order__box-inner {
+  border: 1px solid $green-dark-border;
+  padding: 68px 30px 70px 70px;
 }
 @import "media";
