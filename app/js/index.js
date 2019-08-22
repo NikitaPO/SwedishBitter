@@ -1,7 +1,7 @@
 $(function() {
 
   $('.list__wrapper .tab').on('click', function(event) {
-    var id = $(this).attr('data-id');
+    let id = $(this).attr('data-id');
     $('.list__wrapper').find('.tab-item').removeClass('active-tab').hide();
     $('.list__wrapper .tabs').find('.tab').removeClass('active');
     $(this).addClass('active');
@@ -12,12 +12,12 @@ $(function() {
     return false;
   });
 
-  $('.wrapper .tab').on('click', function(event) {
-  var id = $(this).attr('data-id');
-  	$('.wrapper').find('.tab-item').removeClass('active-tab').hide();
-  	$('.wrapper .tabs').find('.tab').removeClass('active');
+  $('.comments__wrapper .categories__tab').on('click', function(event) {
+  let commentsId = $(this).attr('data-id');
+  	$('.comments__wrapper').find('.comments__item').removeClass('active-tab').hide();
+  	$('.comments__wrapper .comments__categories').find('.categories__tab').removeClass('active');
   	$(this).addClass('active');
-  	$('#'+id).addClass('active-tab').fadeIn();
+  	$('.comments__item-'+ commentsId).addClass('active-tab').fadeIn();
   	return false;
   });
 });

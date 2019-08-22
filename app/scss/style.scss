@@ -201,6 +201,7 @@ input:focus {
   padding: 22px 99px 22px 74px;
   font-family: $fn-mb;
   color: #fff;
+  text-transform: uppercase;
   border: none;
   font-size: 14px;
   background-color: $green;
@@ -459,20 +460,23 @@ input:focus {
   padding-bottom: 30px;
 }
 
-.list__box-link {
-  position: absolute;
-  padding: 0 6px;
-  background-color: $green-light-bg;
+.default__link {
   font-family: $fn-msb;
   font-size: 14px;
   color: #7eb152;
   text-decoration: underline;
+}
+
+.list__box-link {
+  background-color: $green-light-bg;
+  position: absolute;
+  padding: 0 6px;
   line-height: 24px;
   bottom: -11px;
   left: 45px;
 }
 
-.list__box-link:hover {
+.default__link:hover {
   text-decoration: none;
 }
 
@@ -792,6 +796,7 @@ input:focus {
   margin-top: -280px;
 }
 //composition
+
 .composition {
   margin-top: 200px;
 }
@@ -982,14 +987,107 @@ input:focus {
   max-width: 122px;
   padding-bottom: 24px;
 }
-
 //comments
 
 .comments {
   padding-top: 180px;
+
+  .default__title {
+    margin-bottom: 52px;
+  }
 }
 
-.commetns__box-wrapper {
+.comments__bg {
+  margin: 0 auto;
+  max-width: 1720px;
+  width: 100%;
   background-color: #f6f9f3;
+}
+
+.categories__tab {
+  padding: 30px 70px;
+  text-transform: uppercase;
+  background-color: #fff;
+  font-size: 14px;
+  font-family: $fn-mb;
+  line-height: 22px;
+  color: #c3c3c3;
+}
+
+.comments__categories {
+  display: flex;
+  background-color: #fff;
+
+  div:first-child {
+    padding-left: 345px;
+  }
+}
+
+.categories__tab.active {
+  color: #7eb152;
+  background-color: #f6f9f3;
+}
+
+.comments__items {
+  padding: 80px 70px 0;
+}
+
+.comments__item {
+  display: none;
+}
+
+.comments__item.active-tab {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.comments__item-box {
+  padding: 20px 35px 45px 0;
+  width: 50%;
+  position: relative;
+}
+
+.comments__item-box::before {
+  content: '';
+  height: 3px;
+  width: 30px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #a4c58c;
+}
+
+.comments__item-text {
+  color: $gray-text;
+  font-family: $fn-mr;
+  line-height: 22px;
+  font-size: 16px;
+  margin-bottom: 22px;
+}
+
+.comments__item-name {
+  color: $black-text;
+  font-family: $fn-mb;
+}
+
+.comments__btns {
+  margin-top: 21px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+
+  .default__button {
+    padding-left: 23px;
+    padding-right: 73px;
+  }
+
+  .default__button::after {
+    right: 22px;
+  }
+
+  .default__link {
+    margin-right: 50px;
+  }
 }
 @import "media";
