@@ -61,6 +61,7 @@ input:focus {
 }
 //header
 
+.footer__inner,
 .header__inner {
   display: flex;
   justify-content: space-between;
@@ -79,6 +80,7 @@ input:focus {
   font-size: 16px;
 }
 
+.footer__phone,
 .header__phone {
   text-align: right;
 
@@ -206,6 +208,14 @@ input:focus {
   font-size: 14px;
   background-color: $green;
   position: relative;
+}
+
+.default__button:hover {
+  box-shadow: inset 2px 2px 5px rgba(#000, .3);
+}
+
+.default__button:active {
+  background-color: #77a352;
 }
 
 .default__button:after {
@@ -775,7 +785,6 @@ input:focus {
   top: 100px;
   left: 50%;
   transform: translateX(-50%);
-  // transform: translateY(-50%);
   position: absolute;
 }
 
@@ -831,6 +840,27 @@ input:focus {
   }
 }
 
+.composition__item:last-child::after {
+  background-image: none;
+}
+
+.composition__item::after {
+  content: '';
+  background-image: url("../images/grass-bg.png");
+  position: absolute;
+  height: 229px;
+  width: 230px;
+  opacity: 0;
+  z-index: 5;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(90deg);
+}
+
+.composition__item:hover::after {
+  opacity: 0.9;
+}
+
 .composition__item-top-text {
   font-family: $fn-mb;
   text-align: right;
@@ -843,44 +873,122 @@ input:focus {
   left: 15px;
 }
 
-.composition__image-1 {
+.composition__item-1 .composition__image {
   background: url("../images/grass-item1.png") no-repeat center / contain;
 }
 
-.composition__image-2 {
-  background: url("../images/grass-item2.png") no-repeat center / contain;
+.composition__item::before {
+  position: absolute;
+  font-family: $fn-mb;
+  font-size: 14px;
+  line-height: 20px;
+  text-align: center;
+  color: #fff;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(90deg);
+  z-index: 7;
+  display: block;
+  opacity: 0;
+  width: 100%;
 }
 
-.composition__image-3 {
-  background: url("../images/grass-item3.png") no-repeat center / contain;
+.composition__item:hover::before {
+  opacity: 1;
 }
 
-.composition__image-4 {
-  background: url("../images/grass-item4.png") no-repeat center / contain;
+.composition__item-1::before {
+  content: 'Корень дягиля (дудника) лекарственного';
 }
 
-.composition__image-5 {
-  background: url("../images/grass-item5.png") no-repeat center / contain;
+.composition__item-2 {
+  &::before {
+    content: 'Колючник бесстебельный';
+  }
+
+  .composition__image {
+    background: url("../images/grass-item2.png") no-repeat center / contain;
+  }
 }
 
-.composition__image-6 {
-  background: url("../images/grass-item6.png") no-repeat center / contain;
+.composition__item-3 {
+  &::before {
+    content: 'Коричник камфорный';
+  }
+
+  .composition__image {
+    background: url("../images/grass-item3.png") no-repeat center / contain;
+  }
 }
 
-.composition__image-7 {
-  background: url("../images/grass-item7.png") no-repeat center / contain;
+.composition__item-4 {
+  &::before {
+    content: 'Ясень манновый';
+  }
+
+  .composition__image {
+    background: url("../images/grass-item4.png") no-repeat center / contain;
+  }
 }
 
-.composition__image-8 {
-  background: url("../images/grass-item8.png") no-repeat center / contain;
+.composition__item-5 {
+  &::before {
+    content: 'Коммифора мирровая';
+  }
+
+  .composition__image {
+    background: url("../images/grass-item5.png") no-repeat center / contain;
+  }
 }
 
-.composition__image-9 {
-  background: url("../images/grass-item9.png") no-repeat center / contain;
+.composition__item-6 {
+  &::before {
+    content: 'Ревень пальчатый';
+  }
+
+  .composition__image {
+    background: url("../images/grass-item6.png") no-repeat center / contain;
+  }
 }
 
-.composition__image-10 {
-  background: url("../images/grass-item10.png") no-repeat center / contain;
+.composition__item-7 {
+  &::before {
+    content: 'Шафран посевной';
+  }
+
+  .composition__image {
+    background: url("../images/grass-item7.png") no-repeat center / contain;
+  }
+}
+
+.composition__item-8 {
+  &::before {
+    content: 'Сенна александрийская';
+  }
+
+  .composition__image {
+    background: url("../images/grass-item8.png") no-repeat center / contain;
+  }
+}
+
+.composition__item-9 {
+  &::before {
+    content: 'Полынь горькая';
+  }
+
+  .composition__image {
+    background: url("../images/grass-item9.png") no-repeat center / contain;
+  }
+}
+
+.composition__item-10 {
+  &::before {
+    content: 'Куркума цедоария';
+  }
+
+  .composition__image {
+    background: url("../images/grass-item10.png") no-repeat center / contain;
+  }
 }
 
 .composition__list-box {
@@ -1012,6 +1120,7 @@ input:focus {
   font-family: $fn-mb;
   line-height: 22px;
   color: #c3c3c3;
+  cursor: pointer;
 }
 
 .comments__categories {
@@ -1091,6 +1200,7 @@ input:focus {
   }
 }
 //order
+
 .order {
   margin-top: 200px;
 }
@@ -1135,5 +1245,117 @@ input:focus {
 .order__box-inner {
   border: 1px solid $green-dark-border;
   padding: 68px 30px 70px 70px;
+}
+//footer
+
+.footer {
+  margin-top: 300px;
+}
+
+.footer__benefits {
+  .default__wrapper {
+    min-height: 563px;
+  }
+
+  .default__title {
+    margin-bottom: 43px;
+  }
+}
+
+.default__wrapper {
+  max-width: 1720px;
+  width: 100%;
+  margin: 0 auto;
+  background-color: #f6f9f3;
+}
+
+.default__subtitle {
+  text-transform: uppercase;
+  font: 14px $fn-mb;
+  color: $black-text;
+}
+
+.footer__benefits-inner {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.footer__benefits-info {
+  max-width: 640px;
+  padding-left: 70px;
+  padding-top: 40px;
+  margin-right: 82px;
+  width: 100%;
+
+  .default__subtitle {
+    margin-bottom: 50px;
+    line-height: 24px;
+    max-width: 515px;
+    width: 100%;
+  }
+}
+
+.footer__benefits-box {
+  background-color: #fff;
+  padding: 20px;
+}
+
+.footer__benefits-box-inner {
+  border: 1px solid $green-dark-border;
+  padding: 48px 48px 0;
+  color: $black-text;
+  font: 16px $fn-mr;
+  line-height: 22px;
+  max-width: 560px;
+  width: 100%;
+
+  p + p {
+    margin-top: 20px;
+  }
+
+  .default__button {
+    display: inline-block;
+    max-width: 350px;
+    width: 100%;
+  }
+}
+
+.footer__benefits-btn-inner {
+  margin-right: -48px;
+  margin-top: 49px;
+  text-align: right;
+}
+
+.footer__img {
+  margin-top: -160px;
+}
+
+.footer__links {
+  display: flex;
+  justify-content: space-between;
+
+  a {
+    color: $gray-text;
+    font-family: $fn-mr;
+    font-size: 12px;
+    text-decoration: underline;
+  }
+
+  a:hover {
+    text-decoration: none;
+  }
+
+  li + li {
+    margin-left: 53px;
+  }
+}
+
+.footer__logo {
+  max-width: 200px;
+}
+
+.footer__phone a {
+  font-family: $fn-msb;
+  font-size: 20px;
 }
 @import "media";
