@@ -678,6 +678,10 @@ input:focus {
   transition: opacity 1s;
 }
 
+.slider__wrapper.hover {
+  opacity: 0.8;
+}
+
 .slider__bg-pice {
   position: relative;
   z-index: -1;
@@ -685,9 +689,6 @@ input:focus {
   background: url("../images/flower.png") no-repeat center / contain;
 }
 
-.slider__wrapper:hover {
-  opacity: 0.8;
-}
 
 .slider__bg-pice:nth-child(1) {
   transform: scale(-1, 1);
@@ -695,18 +696,18 @@ input:focus {
 
 .slider__content {
   position: relative;
-  z-index: 2;
+  z-index: 10;
   text-align: center;
   padding: 50px 0;
   max-width: 770px;
-  margin: -440px auto 0;
+  margin: -440px auto 0 auto;
   border-top: 3px solid #a4c58c;
   border-bottom: 3px solid #a4c58c;
   transition: box-shadow 0.3s;
 }
 
 .slider__content:hover {
-  box-shadow: 0 10px 14px -15px #a4c58c, 0 -10px 14px -15px #a4c58c;
+  box-shadow: 0 16px 14px -20px #a4c58c, 0 -16px 14px -20px #a4c58c;
 }
 
 .slider__text {
@@ -727,13 +728,11 @@ input:focus {
 }
 
 .slider__item {
-  display: none;
+  display: inline-block;
+  outline: none;
   min-height: 200px;
 }
 
-.slider__item.active {
-  display: block;
-}
 //numbers
 
 .numbers {
@@ -779,6 +778,11 @@ input:focus {
   letter-spacing: 0.5px;
   line-height: 150px;
   color: #f7f9f3;
+  transition: font-size .5s;
+}
+
+.numbers__item-bg-text:hover {
+  font-size: 180px;
 }
 
 .numbers__item-img {
@@ -846,6 +850,7 @@ input:focus {
 
 .composition__item::after {
   content: '';
+    transition: opacity .3s;
   background-image: url("../images/grass-bg.png");
   position: absolute;
   height: 229px;
@@ -861,24 +866,9 @@ input:focus {
   opacity: 0.9;
 }
 
-.composition__item-top-text {
-  font-family: $fn-mb;
-  text-align: right;
-}
-
-.composition__item-name {
-  font-family: $fn-mr;
-  position: absolute;
-  bottom: 15px;
-  left: 15px;
-}
-
-.composition__item-1 .composition__image {
-  background: url("../images/grass-item1.png") no-repeat center / contain;
-}
-
 .composition__item::before {
   position: absolute;
+  transition: opacity .3s;
   font-family: $fn-mb;
   font-size: 14px;
   line-height: 20px;
@@ -895,6 +885,22 @@ input:focus {
 
 .composition__item:hover::before {
   opacity: 1;
+}
+
+.composition__item-top-text {
+  font-family: $fn-mb;
+  text-align: right;
+}
+
+.composition__item-name {
+  font-family: $fn-mr;
+  position: absolute;
+  bottom: 15px;
+  left: 15px;
+}
+
+.composition__item-1 .composition__image {
+  background: url("../images/grass-item1.png") no-repeat center / contain;
 }
 
 .composition__item-1::before {

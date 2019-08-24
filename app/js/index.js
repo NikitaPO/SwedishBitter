@@ -13,11 +13,29 @@ $(function() {
   });
 
   $('.comments__wrapper .categories__tab').on('click', function(event) {
-  let commentsId = $(this).attr('data-id');
-  	$('.comments__wrapper').find('.comments__item').removeClass('active-tab').hide();
-  	$('.comments__wrapper .comments__categories').find('.categories__tab').removeClass('active');
-  	$(this).addClass('active');
-  	$('.comments__item-'+ commentsId).addClass('active-tab').fadeIn();
-  	return false;
+    let commentsId = $(this).attr('data-id');
+    $('.comments__wrapper').find('.comments__item').removeClass('active-tab').hide();
+    $('.comments__wrapper .comments__categories').find('.categories__tab').removeClass('active');
+    $(this).addClass('active');
+    $('.comments__item-' + commentsId).addClass('active-tab').fadeIn(500);
+    return false;
+  });
+
+  $('.slider__content').hover(function() {
+    $('.slider__wrapper').addClass('hover');
+  }, function() {
+    $('.slider__wrapper').removeClass('hover');
+  });
+
+  $('.slider__content').slick({
+    dots: false,
+    arrows: false,
+    autoplay: true,
+    autoplaySpeed: 3000,
+    draggable: false,
+    infinite: true,
+    speed: 500,
+    fade: true,
+    cssEase: 'linear'
   });
 });
