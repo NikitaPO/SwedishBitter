@@ -42,7 +42,7 @@ $(function() {
 
   $(window).scroll(function() {
     let distanceToTop = $('html').scrollTop();
-    if(distanceToTop !== 0) {
+    if (distanceToTop !== 0) {
       $('.toTopBtn').fadeIn(300);
     } else {
       $('.toTopBtn').fadeOut(300);
@@ -53,6 +53,17 @@ $(function() {
     $('html').animate({
       scrollTop: 0
     }, 800);
+  });
+
+  $('html').magnificPopup({
+    delegate: '.popup__link',
+    removalDelay: 500, //delay removal by X to allow out-animation
+    callbacks: {
+      beforeOpen: function() {
+        this.st.mainClass = this.st.el.attr('data-effect');
+      }
+    },
+    midClick: true // allow opening popup on middle mouse click. Always set it to true if you don't provide alternative source.
   });
 
 });

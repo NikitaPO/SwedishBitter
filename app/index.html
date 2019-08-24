@@ -5,16 +5,33 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" href="css/style.min.css">
   <script src="https://kit.fontawesome.com/cf02223ec3.js"></script>
+  <link rel="stylesheet" href="css/style.min.css">
   <title>New project</title>
 </head>
 
 <body>
 
   <button class="toTopBtn">
-    <a><img src="images/arrow.png"></a>
+    <img src="images/arrow.png">
   </button>
+
+  <div id="default__popup" class="white-popup mfp-with-anim mfp-hide">
+    <div class="default__box-wrapper">
+      <div class="default__box">
+        <form>
+          <div class="default__form-inner">
+            <div class="default__subtitle">
+              Получите средство-панацею себе в аптечку уже сегодня
+            </div>
+            <input class="default__form-input" type="text" placeholder="Имя">
+            <input class="default__form-input" type="text" placeholder="Телефон">
+          </div>
+          <button type="submit" class="default__button">Заказать сбор трав</button>
+        </form>
+      </div>
+    </div>
+  </div>
 
   <header id="header" class="header">
     <div class="container">
@@ -180,7 +197,7 @@
         </div>
       </div>
       <div class="list__button-inner">
-        <button class="default__button">Избавиться от проблем</button>
+        <a href="#default__popup" data-effect="mfp-move-horizontal" class="popup__link default__button">Избавиться от проблем</a>
       </div>
     </div>
   </section>
@@ -199,7 +216,7 @@
                 Горечь продается в каждой аптеке!
               </div>
             </div>
-            <button class="default__button">Получить средство-панацею к себе в аптечку</button>
+            <a href="#default__popup" data-effect="mfp-move-horizontal" class="popup__link default__button">Получить средство-панацею к себе в аптечку</a>
           </div>
         </div>
 
@@ -431,7 +448,7 @@
                 именно за счет этого эффекта бальзам способен исцелять многие болезни.</p>
             </div>
             <div class="composition__box-button-inner">
-              <button class="default__button">заказать сбор трав</button>
+              <a href="#default__popup" data-effect="mfp-move-horizontal" class="popup__link default__button">заказать сбор трав</a>
             </div>
           </div>
         </div>
@@ -532,7 +549,7 @@
     <div class="container">
       <div class="comments__btns">
         <a href="#" class="default__link">Читать ещё отзывы</a>
-        <button class="default__button">Присоединиться к тем, кто решил свои проблемы</button>
+        <a href="#default__popup" data-effect="mfp-move-horizontal" class="popup__link default__button">Присоединиться к тем, кто решил свои проблемы</a>
       </div>
     </div>
   </section>
@@ -555,7 +572,7 @@
                 и привнесет вашу энергетику в получившийся целительный эликсир.
               </p>
               <div class="order__headline">Настоя одной упаковки хватает на 4-5 месяцев</div>
-              <button class="default__button">создать эликсир молодости и здоровья</button>
+              <a href="#default__popup" data-effect="mfp-move-horizontal" class="popup__link default__button">создать эликсир молодости и здоровья</a>
             </div>
           </div>
         </div>
@@ -585,7 +602,7 @@
                   <p>К каждой упаковке «Шведской горечи» мы прикла-
                     дываем немецкий сертификат качества.</p>
                   <div class="footer__benefits-btn-inner">
-                    <button class="default__button">заказать сбор трав</button>
+                    <a href="#default__popup" data-effect="mfp-move-horizontal" class="popup__link default__button">заказать сбор трав</a>
                   </div>
                 </div>
               </div>

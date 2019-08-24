@@ -85,6 +85,102 @@ input:focus {
 
 }
 
+//magnificPopup
+
+.mfp-move-horizontal {
+
+  /* start state */
+  .mfp-with-anim {
+    opacity: 0;
+    transition: all 0.3s;
+
+    transform: translateX(-50px);
+  }
+
+  &.mfp-bg {
+    opacity: 0;
+	  transition: all 0.3s;
+  }
+
+  /* animate in */
+  &.mfp-ready {
+    .mfp-with-anim {
+      opacity: 1;
+      transform: translateX(0);
+    }
+    &.mfp-bg {
+      opacity: 0.8;
+    }
+  }
+
+  /* animate out */
+  &.mfp-removing {
+
+    .mfp-with-anim {
+      transform: translateX(50px);
+      opacity: 0;
+    }
+    &.mfp-bg {
+      opacity: 0;
+    }
+
+  }
+
+}
+
+//popup design
+
+.white-popup {
+  position: relative;
+  background: #FFF;
+  width:auto;
+  max-width: 500px;
+  width: 100%;
+  margin: 0 auto;
+  .default__button {
+    width: 100%;
+  }
+  .default__subtitle{
+    max-width: 300px;
+    margin: 0 auto 40px auto;
+  }
+  input + input {
+    margin-top: 30px;
+  }
+}
+
+.default__box-wrapper {
+  padding: 20px;
+}
+
+.mfp-close-btn-in .mfp-close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+.default__form-input {
+  font-size: 14px;
+  border: none;
+  border-bottom: 1px solid $green-light-border;
+  font-family: $fn-mr;
+  color: #000;
+  max-width: 300px;
+  width: 100%;
+  background-color: transparent;
+  padding: 7px 0;
+}
+
+.default__form-input::placeholder {
+  color: $green-text;
+}
+
+.default__form-inner {
+  border: 1px solid $green-light-border;
+  padding: 40px;
+  text-align: center;
+}
+
 
 //header
 
@@ -806,6 +902,7 @@ input:focus {
   font-size: 150px;
   letter-spacing: 0.5px;
   line-height: 150px;
+  user-select: none;
   color: #f7f9f3;
   transition: font-size .5s;
 }
