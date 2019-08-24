@@ -22,9 +22,9 @@ $(function() {
   });
 
   $('.slider__content').hover(function() {
-    $('.slider__wrapper').addClass('hover');
+    $('.slider__bg-pice').addClass('hover');
   }, function() {
-    $('.slider__wrapper').removeClass('hover');
+    $('.slider__bg-pice').removeClass('hover');
   });
 
   $('.slider__content').slick({
@@ -38,4 +38,21 @@ $(function() {
     fade: true,
     cssEase: 'linear'
   });
+
+
+  $(window).scroll(function() {
+    let distanceToTop = $('html').scrollTop();
+    if(distanceToTop !== 0) {
+      $('.toTopBtn').fadeIn(300);
+    } else {
+      $('.toTopBtn').fadeOut(300);
+    }
+  });
+
+  $(".toTopBtn").click(function() {
+    $('html').animate({
+      scrollTop: 0
+    }, 800);
+  });
+
 });

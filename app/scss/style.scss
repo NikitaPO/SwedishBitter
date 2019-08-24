@@ -59,6 +59,33 @@ input:focus {
   margin: 0 auto;
   padding: 0 15px;
 }
+
+.toTopBtn {
+  display: none;
+  position: fixed;
+  height: 50px;
+  width: 50px;
+  z-index: 100;
+  background-color: $green;
+  bottom: 20px;
+  right: 20px;
+  opacity: .3;
+
+  img {
+    transform: rotate(-90deg);
+  }
+
+  &:hover {
+    opacity: 1;
+  }
+  &:active {
+    box-shadow: inset 2px 2px 5px rgba(#000, .3);
+    background-color: #77a352;
+  }
+
+}
+
+
 //header
 
 .footer__inner,
@@ -211,11 +238,11 @@ input:focus {
 }
 
 .default__button:hover {
-  box-shadow: inset 2px 2px 5px rgba(#000, .3);
+  background-color: #77a352;
 }
 
 .default__button:active {
-  background-color: #77a352;
+  box-shadow: inset 2px 2px 5px rgba(#000, .3);
 }
 
 .default__button:after {
@@ -230,6 +257,7 @@ input:focus {
   transform: translateY(-50%);
   z-index: 3;
 }
+
 //advantages
 
 .advantages {
@@ -674,19 +702,19 @@ input:focus {
   display: flex;
   justify-content: space-between;
   height: 619px;
-  opacity: 0.2;
-  transition: opacity 1s;
-}
-
-.slider__wrapper.hover {
-  opacity: 0.8;
 }
 
 .slider__bg-pice {
   position: relative;
   z-index: -1;
+  opacity: 0.2;
+  transition: opacity .8s;
   width: 500px;
   background: url("../images/flower.png") no-repeat center / contain;
+}
+
+.slider__bg-pice.hover {
+  opacity: .8;
 }
 
 
@@ -698,9 +726,10 @@ input:focus {
   position: relative;
   z-index: 10;
   text-align: center;
+  align-self: center;
   padding: 50px 0;
   max-width: 770px;
-  margin: -440px auto 0 auto;
+  margin: 0 auto;
   border-top: 3px solid #a4c58c;
   border-bottom: 3px solid #a4c58c;
   transition: box-shadow 0.3s;
@@ -708,6 +737,12 @@ input:focus {
 
 .slider__content:hover {
   box-shadow: 0 16px 14px -20px #a4c58c, 0 -16px 14px -20px #a4c58c;
+}
+
+.slider__item {
+  display: inline-block;
+  outline: none;
+  min-height: 200px;
 }
 
 .slider__text {
@@ -725,12 +760,6 @@ input:focus {
   span {
     color: #9a9a9a;
   }
-}
-
-.slider__item {
-  display: inline-block;
-  outline: none;
-  min-height: 200px;
 }
 
 //numbers
@@ -845,7 +874,7 @@ input:focus {
 }
 
 .composition__item:last-child::after {
-  background-image: none;
+  content: none;
 }
 
 .composition__item::after {
