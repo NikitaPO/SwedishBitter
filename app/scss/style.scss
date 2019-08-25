@@ -13,7 +13,7 @@ html {
 }
 
 a {
-  text-decoration: none
+  text-decoration: none;
   display: inline-block;
 }
 
@@ -56,6 +56,7 @@ input:focus {
 
 .container {
   max-width: 1200px;
+  width: 100%;
   margin: 0 auto;
   padding: 0 15px;
 }
@@ -268,6 +269,7 @@ input:focus {
 .offer__inner-title {
   font-family: $fn-msb;
   font-size: 60px;
+  line-height: 60px;
   margin-bottom: 53px;
 }
 
@@ -277,9 +279,19 @@ input:focus {
   margin-bottom: 94px;
 }
 
+.offer__form-wrapper {
+  margin-top: -308px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
 .offer__form {
   background-color: #fff;
+  position: relative;
+  z-index: 10;
   padding: 19px;
+  width: 570px;
 }
 
 .offer__form-inner {
