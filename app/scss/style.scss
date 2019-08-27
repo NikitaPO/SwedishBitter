@@ -328,6 +328,10 @@ input:focus {
   max-width: 185px;
 }
 
+.offer__btn-mobile {
+  display: none;
+}
+
 .button__inner {
   text-align: right;
   margin-top: 57px;
@@ -423,7 +427,7 @@ input:focus {
 }
 
 .tab__content {
-  min-width: 500px;
+  width: 500px;
   height: 689px;
   align-self: flex-start;
   position: relative;
@@ -606,6 +610,10 @@ input:focus {
   padding-bottom: 30px;
 }
 
+.list__box-mobile {
+  display: none;
+}
+
 .default__link {
   font-family: $fn-msb;
   font-size: 14px;
@@ -630,7 +638,8 @@ input:focus {
   text-align: right;
 
   .default__button {
-    min-width: 500px;
+    max-width: 500px;
+    width: 100%;
     text-transform: uppercase;
     padding-right: 153px;
     padding-left: 115px;
