@@ -13,7 +13,7 @@
 <body>
 
   <button class="toTopBtn">
-    <img src="images/arrow.png">
+    <img src="images/arrow.png" alt="">
   </button>
 
   <div id="default__popup" class="white-popup mfp-with-anim mfp-hide">
@@ -141,8 +141,8 @@
             </div>
           </div>
         </div>
-
       </div>
+    </div>
   </section>
 
   <section class="list">
@@ -230,7 +230,8 @@
       <div class="features__inner">
 
         <div class="features__comment-box">
-          <div class="features__img"></div>
+          <div class="features__img">
+          </div>
           <div class="features__comment">
             <div class="features__comment-inner">
               <div class="features__comment-text">
@@ -268,7 +269,7 @@
       </div>
     </div>
   </section>
-  <!--
+
   <section class="about">
     <div class="about__wrapper">
 
@@ -297,17 +298,26 @@
                 В конце прошлого века рецепт попал к известной австрийской травнице Марии Трэбэн, которая, изучив и дополнив его, популяризовала в странах Европы. Теперь сбор трав «Шведская горечь» помогает людям по всему миру.
               </p>
             </div>
-            <form class="about__form">
-              <div class="about__form-title">
-                Оставьте свою почту и получайте
-                рецепты молодости и здоровья
-                каждую неделю
+            <div class="form__inner">
+              <div class="about__form-inner">
+                <form class="about__form">
+                  <div class="about__form-title">
+                    Оставьте свою почту и получайте
+                    рецепты молодости и здоровья
+                    каждую неделю
+                  </div>
+                  <div class="about__input-wrapper">
+                    <input type="text" placeholder="E-mail">
+                  </div>
+                  <button class="default__button" type="submit">
+                    оставить почту
+                  </button>
+                </form>
               </div>
-              <input type="text" placeholder="E-mail">
-              <button class="default__button" type="submit">
-                оставить почту
-              </button>
-            </form>
+              <div class="about__img-mobile">
+                <img src="images/pic.jpg">
+              </div>
+            </div>
           </div>
 
         </div>
@@ -355,7 +365,7 @@
       <div class="slider__bg-pice"></div>
     </div>
   </section>
-
+  <!--
   <section class="numbers">
     <div class="numbers__wrapper">
       <div class="container">

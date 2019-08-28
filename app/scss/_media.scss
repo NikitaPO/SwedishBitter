@@ -1,4 +1,61 @@
+@media screen and (max-width: 1615px) {
+  .form__inner {
+    margin-top: -24px;
+  }
+
+  .about__img {
+    display: none;
+  }
+
+
+  .about__box {
+    max-width: none;
+
+    .default__title {
+      text-align: center;
+    }
+  }
+
+  .about__form {
+    margin: 0 auto;
+    padding-top: 80px;
+  }
+
+  .form__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px  ;
+  }
+
+  .about__form-inner {
+    width: 50%;
+  }
+
+  .about__img-mobile {
+    display: block;
+    text-align: right;
+
+    img {
+      max-width: 352px;
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  .about__text {
+    width: 100%;
+    text-align: center;
+    margin-left: 0;
+    padding: 50px 270px;
+  }
+}
 @media screen and (max-width: 1200px) {
+  .default__title {
+    font-size: 30px;
+    line-height: 40px;
+  }
+
   .offer__inner {
     justify-content: space-around;
   }
@@ -29,6 +86,10 @@
 
   .list__bg {
     height: 540px;
+  }
+
+  .list__title-inner {
+    margin-left: 40px;
   }
 
   .tabs {
@@ -66,6 +127,91 @@
       right: 45px;
     }
   }
+
+  .features {
+    margin-top: 150px;
+    margin-bottom: 0;
+
+    .container {
+      max-width: 100%;
+      padding: 0;
+    }
+  }
+
+  .features__inner {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .features__list-box {
+    order: -1;
+    padding: 0 20px;
+    max-width: 578px;
+    margin: 0 auto;
+
+    .features__list-title,
+    .features__title-inner {
+      text-align: center;
+      margin-bottom: 35px;
+    }
+  }
+
+  .features__list {
+    li + li {
+      margin-top: 25px;
+    }
+  }
+
+  .features__comment-box {
+    position: relative;
+    padding-top: 46px;
+    width: 100%;
+  }
+
+  .features__img {
+    margin: 0 auto;
+    width: 100%;
+    display: block;
+    background: url("../images/women.jpg") no-repeat center center/cover;
+  }
+
+  .features__comment {
+    z-index: 10  ;
+    right: 50%;
+    transform: translateX(50%);
+  }
+
+  .about {
+    .container {
+      padding: 0;
+    }
+  }
+
+  .about__box {
+    max-width: none;
+    padding-top: 0;
+
+    .default__title {
+      padding-top: 217px;
+      padding-right: 165px;
+      padding-left: 165px;
+      background-color: #f6f9f3;
+      text-align: center;
+      margin-bottom: 0;
+    }
+  }
+
+  .about__text {
+    text-align: left;
+    padding: 43px 20px 100px 20px;
+  }
+
+  .about__form {
+    max-width: 279px;
+  }
+
 }
 @media screen and (max-width: 992px) {
   .offer__text-wrapper {
@@ -92,6 +238,20 @@
     font-size: 50px;
     line-height: 60px;
     margin-bottom: 23px;
+  }
+
+  .default__button {
+    padding: 19px 65px 19px 19px;
+  }
+
+  .default__button::after {
+    right: 30px  ;
+  }
+
+  .about__box {
+    .default__title {
+      padding: 160px 20px 0 20px;
+    }
   }
 }
 //tablet
@@ -195,10 +355,50 @@
   .list__bg {
     margin-bottom: -705px;
   }
+
+  .form__inner {
+    flex-direction: column-reverse;
+    padding: 0;
+  }
+
+  .about__img-mobile img {
+    max-width: 500px;
+  }
+
+  .about__form {
+    padding-top: 33px;
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .about__form-inner {
+    max-width: 60%;
+    width: 100%;
+  }
+
+  .about__form-title {
+    text-align: center;
+    max-width: 240px;
+    margin: 0 auto;
+  }
+
+  .about__input-wrapper {
+    padding: 0 11px;
+  }
+
 }
 @media screen and (max-width: 576px) {
   .default__title {
     font-size: 24px;
+    line-height: 26px;
+  }
+
+  .default__button {
+    padding: 19px;
+  }
+  .default__button::after {
+    display: none;
+    text-align: center;
   }
 
   .header__phone a {
@@ -216,6 +416,7 @@
   .advantages__item-inner {
     width: 100%;
     margin-bottom: 50px;
+
     &:last-child {
       margin-bottom: 0;
     }
@@ -247,6 +448,10 @@
 
   .tab {
     padding-left: 11px;
+    pointer-events: none;
+    &.active::after {
+      display: none;
+    }
   }
 
   .tab__content-inner {
@@ -267,14 +472,72 @@
     padding: 19px;
   }
 
-  .list__button-inner .default__button{
+  .list__button-inner .default__button {
     max-width: 100%;
     text-align: center;
     padding: 19px;
+
     &::after {
       display: none;
     }
   }
+
+  .features {
+    margin-top: 55px;
+  }
+
+  .features__img {
+    background: url("../images/women.jpg") no-repeat top center/100%;
+    height: 244px;
+  }
+
+  .features__comment-box {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .features__comment-inner {
+    position: static;
+    border: none;
+  }
+
+  .features__comment {
+    bottom: 15%;
+    text-align: center;
+    padding: 0;
+    position: static;
+    right: auto;
+    transform: none;
+  }
+
+  .about__box {
+    .default__title {
+      padding: 60px 20px 0 20px;
+    }
+  }
+  .about__text {
+    padding: 20px 11px 20px 11px;
+  }
+
+  .form__inner {
+    margin-top: 0;
+  }
+
+  .about__form-inner {
+    max-width: 100%;
+  }
+
+  .about__form-title {
+    margin-bottom: 30px;
+  }
+
+  .about__form {
+    input::placeholder {
+      text-align: center;
+    }
+  }
+
+
 }
 @media screen and (max-width: 450px) {}
 //mobile

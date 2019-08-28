@@ -44,6 +44,7 @@ $(function() {
     let distanceToTop = $('html').scrollTop();
     if (distanceToTop !== 0) {
       $('.toTopBtn').fadeIn(300);
+
     } else {
       $('.toTopBtn').fadeOut(300);
     }

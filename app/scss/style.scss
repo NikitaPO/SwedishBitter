@@ -70,7 +70,7 @@ input:focus {
   background-color: $green;
   bottom: 20px;
   right: 20px;
-  opacity: .3;
+  opacity: 0.3;
 
   img {
     transform: rotate(-90deg);
@@ -79,72 +79,66 @@ input:focus {
   &:hover {
     opacity: 1;
   }
+
   &:active {
     box-shadow: inset 2px 2px 5px rgba(#000, .3);
     background-color: #77a352;
   }
-
 }
-
 //magnificPopup
-
 .mfp-move-horizontal {
-
   /* start state */
   .mfp-with-anim {
     opacity: 0;
     transition: all 0.3s;
-
     transform: translateX(-50px);
   }
 
   &.mfp-bg {
     opacity: 0;
-	  transition: all 0.3s;
+    transition: all 0.3s;
   }
-
   /* animate in */
   &.mfp-ready {
     .mfp-with-anim {
       opacity: 1;
       transform: translateX(0);
     }
+
     &.mfp-bg {
       opacity: 0.8;
     }
   }
-
   /* animate out */
   &.mfp-removing {
-
     .mfp-with-anim {
       transform: translateX(50px);
       opacity: 0;
     }
+
     &.mfp-bg {
       opacity: 0;
     }
-
   }
-
 }
-
 //popup design
-
 .white-popup {
   position: relative;
   background: #FFF;
-  width:auto;
+  width: auto;
   max-width: 500px;
   width: 100%;
   margin: 0 auto;
+
   .default__button {
     width: 100%;
   }
-  .default__subtitle{
+
+  .default__subtitle {
     max-width: 300px;
-    margin: 0 auto 40px auto;
+    margin: 0 auto 40px;
   }
+
   input + input {
     margin-top: 30px;
   }
@@ -181,10 +175,7 @@ input:focus {
   padding: 40px;
   text-align: center;
 }
-
-
 //header
-
 .footer__inner,
 .header__inner {
   display: flex;
@@ -369,9 +360,7 @@ input:focus {
   transform: translateY(-50%);
   z-index: 3;
 }
-
 //advantages
-
 .advantages {
   padding-top: 86px;
   padding-bottom: 200px;
@@ -673,7 +662,8 @@ input:focus {
 .features__comment {
   padding: 20px;
   position: absolute;
-  top: 483px;
+  bottom: -90px;
+  right: 551px;
   background-color: #fff;
   max-width: 600px;
   width: 100%;
@@ -743,7 +733,8 @@ input:focus {
 //about
 
 .about__wrapper {
-  width: 1720px;
+  max-width: 1720px;
+  width: 100%;
   margin: 0 auto;
   position: relative;
 }
@@ -775,6 +766,10 @@ input:focus {
 .about__img {
   position: absolute;
   right: 0;
+}
+
+.about__img-mobile {
+  display: none;
 }
 
 .about__form {
@@ -825,15 +820,14 @@ input:focus {
   position: relative;
   z-index: -1;
   opacity: 0.2;
-  transition: opacity .8s;
+  transition: opacity 0.8s;
   width: 500px;
   background: url("../images/flower.png") no-repeat center / contain;
 }
 
 .slider__bg-pice.hover {
-  opacity: .8;
+  opacity: 0.8;
 }
-
 
 .slider__bg-pice:nth-child(1) {
   transform: scale(-1, 1);
@@ -878,9 +872,7 @@ input:focus {
     color: #9a9a9a;
   }
 }
-
 //numbers
-
 .numbers {
   margin-top: 198px;
 
@@ -925,7 +917,7 @@ input:focus {
   line-height: 150px;
   user-select: none;
   color: #f7f9f3;
-  transition: font-size .5s;
+  transition: font-size 0.5s;
 }
 
 .numbers__item-bg-text:hover {
@@ -997,7 +989,7 @@ input:focus {
 
 .composition__item::after {
   content: '';
-    transition: opacity .3s;
+  transition: opacity 0.3s;
   background-image: url("../images/grass-bg.png");
   position: absolute;
   height: 229px;
@@ -1015,7 +1007,7 @@ input:focus {
 
 .composition__item::before {
   position: absolute;
-  transition: opacity .3s;
+  transition: opacity 0.3s;
   font-family: $fn-mb;
   font-size: 14px;
   line-height: 20px;
@@ -1511,4 +1503,5 @@ input:focus {
   font-family: $fn-msb;
   font-size: 20px;
 }
+
 @import "media";
