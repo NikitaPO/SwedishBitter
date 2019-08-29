@@ -7,7 +7,6 @@
     display: none;
   }
 
-
   .about__box {
     max-width: none;
 
@@ -25,7 +24,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0 20px  ;
+    padding: 0 20px;
   }
 
   .about__form-inner {
@@ -53,6 +52,8 @@
 @media screen and (max-width: 1200px) {
   .default__title {
     font-size: 30px;
+    text-align: center;
+    margin: 0 auto;
     line-height: 40px;
   }
 
@@ -178,7 +179,7 @@
   }
 
   .features__comment {
-    z-index: 10  ;
+    z-index: 10;
     right: 50%;
     transform: translateX(50%);
   }
@@ -198,20 +199,164 @@
       padding-right: 165px;
       padding-left: 165px;
       background-color: #f6f9f3;
-      text-align: center;
       margin-bottom: 0;
     }
   }
 
   .about__text {
     text-align: left;
-    padding: 43px 20px 100px 20px;
+    padding: 43px 20px 100px;
   }
 
   .about__form {
     max-width: 279px;
   }
 
+  .slider__bg-pice {
+    display: none;
+  }
+
+  .slider__wrapper {
+    height: auto;
+    margin-top: 54px;
+    padding: 0 20px;
+  }
+
+  .slider__item {
+    min-height: 0;
+  }
+
+  .numbers {
+    margin-top: 0;
+  }
+
+  .numbers-bg {
+    display: none;
+  }
+
+  .numbers__wrapper {
+    background-color: #f6f9f3;
+    padding: 100px 0;
+
+    .default__title {
+      margin: 0 auto 40px;
+      max-width: 605px;
+      width: 100%;
+    }
+  }
+
+  .numbers__item {
+    width: 224px;
+    padding: 50px 10px 30px;
+  }
+
+  .numbers__item-img {
+    left: 50%;
+    width: 71px;
+    transform: translate(-50%, -50%);
+  }
+
+  .numbers__item-bg-text {
+    font-size: 110px;
+    line-height: 75px;
+  }
+
+  .numbers__item-text {
+    margin-top: 27px;
+    font-size: 10px;
+    line-height: 14px;
+  }
+
+  .numbers__items {
+    max-width: 724px;
+    width: 100%;
+  }
+
+  .composition {
+    margin: 100px 0 140px;
+  }
+
+  .composition__list-box-wrapper {
+    order: -1;
+    width: 100%;
+  }
+
+  .composition__list-box {
+    max-width: 500px;
+    padding-left: 0;
+    margin: 0 auto 48px;
+
+    .default__title {
+      margin-bottom: 43px;
+    }
+  }
+
+  .composition__items {
+    justify-content: space-around;
+  }
+
+  .composition__item {
+    margin: 15px;
+    height: 330px;
+    width: 330px;
+  }
+
+  .composition__box {
+    order: 12;
+    height: 330px;
+    width: 330px;
+    padding: 0;
+    margin: 15px;
+
+    p:last-child {
+      display: none;
+    }
+  }
+
+  .composition__box-wrapper {
+    padding: 83px 0 0;
+  }
+
+  .composition__box-text {
+    padding: 0 30px;
+  }
+
+  .composition__box-text::before {
+    display: none;
+  }
+
+  .composition__box-button-inner {
+    margin-right: 0;
+    margin-top: 46px;
+
+    .default__button {
+      width: 100%;
+      padding: 19px 83px 19px 60px;
+      text-align: center;
+    }
+
+    .default__button::after {
+      right: 40px;
+    }
+  }
+
+  .comments {
+    padding: 0;
+  }
+
+  .comments__categories div:first-child {
+    padding-left: 70px;
+  }
+
+  .comments__categories {
+    display: flex;
+    justify-content: center;
+  }
+
+  .categories__tab {
+    width: 50%;
+    text-align: center;
+  }
 }
 @media screen and (max-width: 992px) {
   .offer__text-wrapper {
@@ -245,12 +390,37 @@
   }
 
   .default__button::after {
-    right: 30px  ;
+    right: 30px;
   }
 
   .about__box {
     .default__title {
-      padding: 160px 20px 0 20px;
+      padding: 160px 20px 0;
+    }
+  }
+
+  .comments__item-box {
+    width: 100%;
+
+    &:nth-child(-n+2) {
+      display: none;
+    }
+  }
+
+  .comments .container {
+    padding: 0;
+  }
+
+  .comments__btns {
+    margin-top: 0;
+    background-color: $green-light-bg;
+    justify-content: center;
+    flex-direction: column;
+    padding-bottom: 75px;
+
+    .default__link {
+      margin-right: 0;
+      margin-bottom: 27px;
     }
   }
 }
@@ -386,6 +556,33 @@
     padding: 0 11px;
   }
 
+  .numbers__wrapper {
+    padding-top: 60px;
+    padding-bottom: 35px;
+
+    .default__title {
+      margin-bottom: 0;
+    }
+  }
+
+  .numbers__item {
+    border: none;
+  }
+
+  .numbers__item + .numbers__item {
+    margin-left: 0;
+  }
+
+  .numbers__item-bg-text {
+    color: #fff;
+  }
+
+  .numbers__items {
+    padding: 0;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f6f9f3;
+  }
 }
 @media screen and (max-width: 576px) {
   .default__title {
@@ -395,7 +592,16 @@
 
   .default__button {
     padding: 19px;
+    text-align: center;
+    width: 100%;
   }
+
+  .comments__btns .default__button {
+    padding: 19px;
+    text-align: center;
+    width: 100%;
+  }
+
   .default__button::after {
     display: none;
     text-align: center;
@@ -449,6 +655,7 @@
   .tab {
     padding-left: 11px;
     pointer-events: none;
+
     &.active::after {
       display: none;
     }
@@ -512,11 +719,12 @@
 
   .about__box {
     .default__title {
-      padding: 60px 20px 0 20px;
+      padding: 60px 20px 0;
     }
   }
+
   .about__text {
-    padding: 20px 11px 20px 11px;
+    padding: 20px 11px;
   }
 
   .form__inner {
@@ -537,6 +745,97 @@
     }
   }
 
+  .slider__text {
+    font-size: 14px;
+    line-height: 24px;
+  }
+
+  .slider__author {
+    font-size: 14px;
+  }
+
+  .slider__wrapper {
+    margin-top: 0;
+  }
+
+  .slider__content {
+    border: none;
+    padding: 60px 11px 54px;
+    margin-top: 0;
+
+    &:hover {
+      box-shadow: none;
+    }
+  }
+
+  .composition {
+    margin-bottom: 50px;
+  }
+
+  .composition .container {
+    padding: 0;
+  }
+
+  .composition__box {
+    margin: 0;
+    width: 100%;
+    height: auto;
+  }
+
+  .composition__list {
+    li + li {
+      margin-top: 20px;
+    }
+  }
+
+  .composition__list-box {
+    margin-bottom: 19px;
+  }
+
+  .composition__box-wrapper {
+    border: none;
+    text-align: center;
+    padding-top: 50px;
+
+    .default__title {
+      padding-right: 10px;
+      padding-left: 10px;
+      margin-bottom: 24px;
+    }
+  }
+
+  .composition__item {
+    width: 300px;
+    height: 300px;
+    margin: 5.5px 11px;
+  }
+
+  .composition__list li::before {
+    left: 10px;
+  }
+
+  .comments {
+    .default__title {
+      margin-bottom: 28px;
+    }
+  }
+
+  .categories__tab {
+    padding: 20px 25px !important;
+  }
+
+  .comments__items {
+    padding: 0 11px 30px 11px;
+  }
+
+  .comments__item-box {
+    margin-top: 30px;
+    padding: 18px 0 0 0;
+  }
+
+  .comments__btns {
+    padding-bottom: 0  ;
+  }
 
 }
 @media screen and (max-width: 450px) {}

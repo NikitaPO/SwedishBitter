@@ -4,6 +4,7 @@
 
 html {
   box-sizing: border-box;
+  min-width: 320px;
 }
 
 *,
@@ -840,6 +841,7 @@ input:focus {
   align-self: center;
   padding: 50px 0;
   max-width: 770px;
+  width: 100%;
   margin: 0 auto;
   border-top: 3px solid #a4c58c;
   border-bottom: 3px solid #a4c58c;
@@ -884,7 +886,8 @@ input:focus {
 }
 
 .numbers__wrapper {
-  width: 1720px;
+  max-width: 1720px;
+  width: 100%;
   margin: 0 auto;
 }
 
@@ -917,11 +920,11 @@ input:focus {
   line-height: 150px;
   user-select: none;
   color: #f7f9f3;
-  transition: font-size 0.5s;
+  transition: transform 0.5s;
 }
 
 .numbers__item-bg-text:hover {
-  font-size: 180px;
+  transform: scale(1.3);
 }
 
 .numbers__item-img {
@@ -1354,7 +1357,8 @@ input:focus {
   background: url("../images/el-bg.jpg") no-repeat left top / contain;
   margin: 0 auto;
   height: 775px;
-  width: 1720px;
+  max-width: 1720px;
+  width: 100%;
 }
 
 .order__box-wrapper {
