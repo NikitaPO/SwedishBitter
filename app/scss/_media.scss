@@ -87,6 +87,7 @@
 
   .list__bg {
     height: 540px;
+    margin-bottom: -708px;
   }
 
   .list__title-inner {
@@ -442,6 +443,16 @@
   .footer .container {
     padding: 0 11px;
   }
+
+  .footer__links {
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+
+    li + li {
+      margin-left: 0;
+    }
+  }
 }
 @media screen and (max-width: 992px) {
   .default__button {
@@ -705,7 +716,8 @@
 
   .footer__benefits-info {
     flex-direction: column;
-    padding-top: 20px ;
+    padding-top: 20px;
+    padding-bottom: 0;
     .default__subtitle {
       font-size: 14px;
       padding: 0 11px;
@@ -739,6 +751,16 @@
     width: 100%;
     max-width: 100%;
     margin-bottom: 8px;
+  }
+
+  .footer__inner {
+    padding: 50px 11px;
+    justify-content: center;
+  }
+
+  .footer__logo,
+  .footer__phone {
+    display: none;
   }
 
 }
@@ -825,6 +847,10 @@
 
   .tab__content-inner {
     display: none;
+  }
+
+  .list__bg {
+    margin-bottom: -678px;
   }
 
   .list__wrapper {
