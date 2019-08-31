@@ -1,5 +1,5 @@
 {
-  "name": "marathon0to1",
+  "name": "SwedishBitter",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
@@ -25,10 +25,10 @@
     "gulp-uglify": "^3.0.2"
   },
   "dependencies": {
-    "bootstrap": "^4.3.1",
     "magnific-popup": "^1.1.0",
     "normalize.css": "^8.0.1",
-    "slick-carousel": "^1.8.1"
+    "slick-carousel": "^1.8.1",
+    "vide": "^0.5.1"
   },
   "description": ""
 }
