@@ -243,6 +243,14 @@ input:focus {
   display: block;
 }
 
+.offer__bg-img {
+  background: url("../images/header-bg.jpg") no-repeat center center / cover;
+  min-height: 545px;
+  max-width: 1720px;
+  margin: 0 auto;
+  display: none;
+}
+
 .offer__bg-video {
   display: block;
   object-fit: cover;
