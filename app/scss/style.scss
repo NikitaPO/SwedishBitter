@@ -247,7 +247,6 @@ input:focus {
   display: block;
   object-fit: cover;
   overflow: hidden;
-
   margin: 0 auto;
   position: relative;
   z-index: -1;
@@ -313,6 +312,7 @@ input:focus {
   padding: 19px;
   width: 570px;
 }
+
 .offer__form-inputs {
   display: flex;
   justify-content: space-between;
@@ -323,22 +323,20 @@ input:focus {
   padding: 50px 50px 0;
 
   input {
+    display: block;
     font-size: 14px;
     border: none;
     border-bottom: 1px solid $green-light-border;
     font-family: $fn-mr;
     color: #000;
-    min-width: 195px;
+    max-width: 195px;
+    width: 100%;
     background-color: transparent;
     padding: 7px 0;
   }
 
   input::placeholder {
     color: $green-text;
-  }
-
-  input + input {
-    margin-left: 30px;
   }
 }
 
