@@ -95,6 +95,9 @@ gulp.task('export', async function() {
 
   let buildImg = gulp.src('app/images/**/*.*')
     .pipe(gulp.dest('dist/images'))
+
+  let buildVideo = gulp.src('app/video/**/*.*')
+    .pipe(gulp.dest('dist/video'))
 });
 
 gulp.task('build', gulp.series('del', 'export'));
