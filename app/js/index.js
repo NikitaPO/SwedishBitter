@@ -56,6 +56,13 @@ $(function() {
     }, 800);
   });
 
+  $('.list .default__link[href^="#"').click(function() {
+    let target = $(this).attr('href');
+    $('html').animate({
+      scrollTop: $(target).offset().top
+    }, 800)
+  });
+
   $('html').magnificPopup({
     delegate: '.popup__link',
     removalDelay: 500, //delay removal by X to allow out-animation
@@ -85,7 +92,5 @@ $(function() {
       });
     }
   });
-
-
 
 });
