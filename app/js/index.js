@@ -1,5 +1,11 @@
 $(function() {
 
+  $('.advantages__item-inner').hover(function() {
+    $(this).addClass('hover');
+  }, function() {
+    $(this).removeClass('hover');
+  });
+
   $('.list__wrapper .tab').on('click', function(event) {
     let id = $(this).attr('data-id');
     $('.list__wrapper').find('.tab-item').removeClass('active-tab').hide();

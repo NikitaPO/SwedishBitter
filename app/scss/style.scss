@@ -424,8 +424,14 @@ input:focus {
   width: 25px;
   height: 25px;
   position: absolute;
+  transform: scale(1);
+  transition: transform .3s;
   top: 0;
   left: 0;
+}
+
+.advantages__item-inner.hover .advantages__item::before {
+  transform: scale(1.5);
 }
 
 .advantages__item-title {
