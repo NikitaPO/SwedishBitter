@@ -36,6 +36,7 @@ gulp.task('scss', function() {
 gulp.task('css-libs', function() {
   return gulp.src([
       'node_modules/normalize.css/normalize.css',
+      'node_modules/animate.css/animate.min.css',
       'node_modules/magnific-popup/dist/magnific-popup.css',
       'node_modules/slick-carousel/slick/slick.css'
     ])

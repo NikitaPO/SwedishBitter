@@ -1530,6 +1530,9 @@ input:focus {
 
 .footer__img {
   margin-top: -160px;
+  transform: scale(1);
+  transition: transform .3s;
+  cursor: pointer;
 }
 
 .footer__img-mobile {
