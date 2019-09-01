@@ -2,6 +2,7 @@
   .offer__bg-video {
     display: none;
   }
+
   .offer__bg-img {
     display: block;
   }
@@ -710,6 +711,7 @@
   .footer {
     margin-top: 0;
   }
+
   .footer .container {
     padding: 0;
   }
@@ -726,6 +728,7 @@
     flex-direction: column;
     padding-top: 20px;
     padding-bottom: 0;
+
     .default__subtitle {
       font-size: 14px;
       padding: 0 11px;
@@ -738,7 +741,7 @@
     max-width: 100%;
     background-color: transparent;
     box-shadow: none;
-    padding: 40px 30px 90px 30px;
+    padding: 40px 30px 90px;
 
     &::before {
       background-color: transparent;
@@ -770,7 +773,6 @@
   .footer__phone {
     display: none;
   }
-
 }
 @media screen and (max-width: 576px) {
   .default__title {
@@ -911,6 +913,10 @@
     position: static;
     right: auto;
     transform: none;
+
+    .default__button {
+      padding: 19px;
+    }
   }
 
   .about__box {
@@ -986,6 +992,10 @@
 
   .composition__list-box {
     margin-bottom: 19px;
+  }
+
+  .composition__box-button-inner .default__button {
+    padding: 19px;
   }
 
   .composition__box-wrapper {

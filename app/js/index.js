@@ -76,9 +76,13 @@ $(function() {
     const imgArr = imgTransformMatrix.match(/\b(\d+\.\d+)|\d\b/gi);
     const imgScale = +imgArr[0];
     if (imgScale === 1) {
-      $(".footer__img").css({'transform':'scale(1.2)'});
+      $(".footer__img").css({
+        'transform': 'scale(1.2)'
+      });
     } else {
-      $(".footer__img").css({'transform':'scale(1)'});
+      $(".footer__img").css({
+        'transform': 'scale(1)'
+      });
     }
   });
 

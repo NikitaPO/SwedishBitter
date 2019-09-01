@@ -25,7 +25,7 @@ gulp.task('scss', function() {
       outputStyle: 'compressed'
     }).on('error', scss.logError))
     .pipe(autoprefixer({
-        overRideBrowsers: ['last 10 versions'],
+      overRideBrowsers: ['last 10 versions'],
     }))
     .pipe(gulp.dest('app/css'))
     .pipe(browserSync.reload({
@@ -84,11 +84,11 @@ gulp.task('export', async function() {
   let buildHtml = gulp.src('app/**/*.html')
     .pipe(gulp.dest('dist'))
 
-  let buildCSS = gulp.src('app/css/**/style.min.css')
+  let buildCSS = gulp.src('app/css/**/*.min.css')
     .pipe(cleanCSS())
     .pipe(gulp.dest('dist/css'))
 
-  let buildJS = gulp.src('app/js/**/index.min.js')
+  let buildJS = gulp.src('app/js/**/*.min.js')
     .pipe(gulp.dest('dist/js'))
 
   let buildFonts = gulp.src('app/fonts/**/*.*')
