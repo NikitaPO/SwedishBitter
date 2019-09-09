@@ -72,6 +72,7 @@ $(function() {
   });
 
   $('.list .default__link[href^="#"').click(function() {
+    event.preventDefault();
     let target = $(this).attr('href');
     $('html').animate({
       scrollTop: $(target).offset().top
