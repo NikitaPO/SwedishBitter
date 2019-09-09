@@ -45,6 +45,7 @@ button {
 }
 
 body {
+  overflow-x: hidden;
   font-family: $fn-mr;
   color: $black-text;
   line-height: 23px;
